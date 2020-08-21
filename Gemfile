@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'rugged'
+gem 'pronto', '0.9.5'
 

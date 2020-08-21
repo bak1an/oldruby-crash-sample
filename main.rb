@@ -1,4 +1,4 @@
-require 'rugged'
+require 'pronto'
 
 repo = Rugged::Repository.new('.')
 
