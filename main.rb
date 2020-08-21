@@ -1,3 +1,5 @@
+require 'rails'
+require 'openssl'
 require 'pronto'
 
 repo = Rugged::Repository.new('.')
