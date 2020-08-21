@@ -1,0 +1,21 @@
+name: Run the script
+
+on: [ push ]
+
+jobs:
+  run:
+    name: Run with ${{ matrix.ruby-version }}
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        ruby-version: ['2.3.8', '2.4.9', '2.5.7']
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+      - name: Run it
+        run: |
+          bundle install
+          bundle exec ruby main.rb
+
