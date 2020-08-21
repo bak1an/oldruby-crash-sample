@@ -11,6 +11,8 @@ jobs:
         ruby-version: ['2.3.8', '2.4.9', '2.5.7']
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
