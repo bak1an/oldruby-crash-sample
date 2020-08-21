@@ -9,6 +9,7 @@ jobs:
     strategy:
       matrix:
         ruby-version: ['2.3.8', '2.4.9', '2.5.7']
+      fail-fast: false
     steps:
       - uses: actions/checkout@v2
         with:
@@ -20,6 +21,4 @@ jobs:
         run: |
           bundle install
           bundle exec ruby main.rb
-      - name: Run pronto
-        run: bundle exec pronto run
 
